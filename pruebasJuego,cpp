@@ -1,0 +1,41 @@
+/*
+ * pruebasJuego.cpp
+ *
+ *  Created on: Jan 6, 2016
+ *      Author: ivangd97
+ */
+
+#include "pruebasJuego.h"
+#include "entorno.h"
+#include "Juego.h"
+#include "Tablero.h"
+#include <iostream>
+
+void pruebasPintarTablero(){
+	tablero t;
+	cout<<"INICIO DE LAS PRUEBAS PARA PINTAR TABLERO"<<endl;
+	iniciar(t,4);//iniciamos un tablero de tamaño 4x4
+	entornoIniciar(4);
+	entornoPausa(2000000);
+	cout<<"Asignamos el valor 2 en la casilla [1][1]"<<endl;
+	t.m[1][1]=2;
+	cout<<"Asignamos el valor 4 a la casilla [3][4]"<<endl;
+	t.m[2][3]=4;
+	pintarTablero(t);
+	cout<<"Pintamos el tablero iniciado anteriormente con los valores asignados"<<endl;
+	entornoPausa(2000000);
+
+	cout<<"FIN DE LAS PRUEBAS PARA PINTAR TABLERO"<<endl;
+}
+
+void pruebasJuego2048(){
+	cout<<"INICIO DE LAS PRUEBAS DEL JUEGO"<<endl;
+	/*
+	 * Haremos una llamada al módulo del juego y lo usaremos,se espera que el juego
+	 * funcione correctamente
+	 *
+	 */
+	juego_2048();
+
+	cout<<"FIN DE LAS PRUEBAS DEL JUEGO"<<endl;
+}
